@@ -1,6 +1,8 @@
 var app = angular.module('webCont', ['ui.router', 'ngResource', 'ngMaterial']);
 
-angular.module('webCont').config(function($stateProvider, $urlRouterProvider) {
+angular.module('webCont').config(function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
+
+    $mdThemingProvider.theme('default').primaryPalette('cyan');
 
     $stateProvider.state({
         name: "home",

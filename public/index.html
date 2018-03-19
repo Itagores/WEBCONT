@@ -1,15 +1,12 @@
 <!DOCTYPE html >
-<html ng-app="webCont">
+<html ng-app="webCont" lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>WebCont</title>
     <link rel="stylesheet" href="vendor/angular-material/angular-material.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body style="background: lightgrey">
-
-<action-bar></action-bar>
-
+<body>
 
 <ui-view></ui-view>
 
@@ -27,8 +24,8 @@
 <!--CONTROLLERS-->
 <!--<script src="js/controllers/ContatosController.js"></script>
 <script src="js/controllers/ContatoController.js"></script>-->
-<script src="components/home/home.js"></script>
-<script src="components/home/home.component.js"></script>
+<script src="components/login/login.js"></script>
+<script src="components/login/login.component.js"></script>
 
 <script src="components/lancamentos/lancamentos.js"></script>
 <script src="components/lancamentos/lancamentos.component.js"></script>
@@ -40,6 +37,8 @@
 
 <script src="components/razonetes/razonetes.component.js"></script>
 <script src="components/razonetes/razonetes.js"></script>
+
+<script src="service/contAPI.js"></script>
 
 </body>
 </html>

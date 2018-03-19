@@ -1,0 +1,89 @@
+<md-content>
+    <md-toolbar style="height: 450px">
+        <div class="md-toolbar-tools" layout="column" layout-padding>
+            <span flex></span>
+            <img src="style/cont.ie.png" style="width: 30%">
+            <span><md-button class="md-raised" ng-click="vm.isOpenRight()">Entrar</md-button></span>
+            <span><md-button class="md-raised" ng-click="vm.isOpenLeft()">Cadastro</md-button></span>
+
+        </div>
+    </md-toolbar>
+
+    <div layout="column"layout-align="center center">
+
+    </div>
+
+
+</md-content>
+
+<md-sidenav class="md-sidenav-right" md-component-id="right" md-is-open="vm.openLogin">
+
+    <md-toolbar>
+        <h1 class="md-toolbar-tools">Login</h1>
+    </md-toolbar>
+    <md-content layout-padding layout="column" layout-align=" none">
+            <md-input-container flex>
+                <label>email</label>
+                <input type="email" ng-model="vm.email" md-autofocus>
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>senha</label>
+                <input type="password" ng-model="vm.senha">
+            </md-input-container>
+
+
+            <div layout="row" layout-align=" end">
+                <md-button class="md-raised md-primary" ng-disabled="!(vm.senha && vm.email)" ng-click="vm.login({email: vm.email, senha: vm.senha})">Entrar</md-button>
+            </div>
+
+    </md-content>
+
+</md-sidenav>
+
+<md-sidenav class="md-sidenav-left" md-component-id="right" md-is-open="vm.openCadastro">
+
+    <md-toolbar>
+        <h1 class="md-toolbar-tools">Cadastro</h1>
+    </md-toolbar>
+    <md-content layout-padding layout="column" layout-align=" none">
+            <md-input-container flex>
+                <label>email</label>
+                <input required type="email" ng-model="vm.user.email" md-autofocus>
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>senha</label>
+                <input required type="password" ng-model="vm.user.senha">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>repetir senha</label>
+                <input required type="password" ng-model="vm.user.repeatSenha">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>nome</label>
+                <input required type="text" ng-model="vm.user.nome">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>sobrenome</label>
+                <input required type="text" ng-model="vm.user.sobrenome">
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>Data de nascimento</label>
+                <input required type="date" ng-model="vm.user.data_nascimento">
+            </md-input-container>
+
+
+        <div layout="row" layout-align=" end">
+                <md-button class="md-raised md-primary" ng-click="vm.cadastro(vm.user)" ng-disabled="!(vm.user.data_nascimento && vm.user.sobrenome && vm.user.nome)">Cadastrar-se</md-button>
+        </div>
+
+    </md-content>
+
+</md-sidenav>
+
+
